@@ -25,7 +25,20 @@ require("lazy").setup({
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/nvim-cmp'},
   {'L3MON4D3/LuaSnip'},
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('nvim-tree').setup({
+        view = {
+          width = 35,
+        },
+        renderer = {
+          group_empty = true,
+        },
+      })
+    end,
+  },
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
 })
-
